@@ -16,6 +16,7 @@ Terragrunt is a thin wrapper for [Terraform](https://www.terraform.io/) that pro
 1. After downloading the code the structure of your folder will look as follows:
 
 ```
+├── README.md
 ├── api-routes.js
 ├── index.js
 ├── node_modules
@@ -24,7 +25,6 @@ Terragrunt is a thin wrapper for [Terraform](https://www.terraform.io/) that pro
 ├── package-lock.json
 ├── package.json
 ├── spec
-│   ├── README.md
 │   ├── api.spec.js
 │   └── hello.spec.js
 └── terraform
@@ -34,8 +34,6 @@ Terragrunt is a thin wrapper for [Terraform](https://www.terraform.io/) that pro
     ├── 20-security-groups.tf
     ├── 50-ec2.tf
     ├── outputs.tf
-    ├── terraform.tfstate
-    ├── terraform.tfstate.backup
     ├── terraform.tfvars
     └── variables.tf
 ```
