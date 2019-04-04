@@ -56,9 +56,36 @@ Terragrunt is a thin wrapper for [Terraform](https://www.terraform.io/) that pro
 
 1. Open a browser and enter http://<nodeapp_public_ip>:4000/api. You should see an output similar to the following:
 
-   ```
+```
   {
       "message": "Automation for the People",
       "timestamp": 1554394345667
   }
-   ```
+```
+
+
+## Running Unit Tests
+
+Unit tests for this application can be run from either the local environment or from the instance which was spun up in AWS.
+
+Running from the local environment:
+
+```
+Clone the repo as above
+Make sure that Node is installed
+Run npm install jasmine-node
+Run npm install request
+Update the value of the public IP in the api_spec.js file for both the variables
+Run node_modules/.bin/jasmine-node spec
+```
+
+Running from the EC2 instance:
+
+```
+SSH into the EC2 instance
+Run npm install jasmine-node
+Run npm install request
+Update the value of the public IP in the api_spec.js file for both the variables
+Run node_modules/.bin/jasmine-node spec
+```
+
