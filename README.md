@@ -14,7 +14,7 @@ Once verified, the whole infrastructure can be destroyed with a simple command.
 
 Clone the repository for the code from here: https://github.com/edwardpius/awsTemplate.git.
 
-After downloading the code the structure of your folder will look as follows:
+1. After downloading the code the structure of your folder will look as follows:
 
     ```
     ├── README.md
@@ -39,7 +39,7 @@ After downloading the code the structure of your folder will look as follows:
         └── variables.tf
     ```
 
-Fill in the appropriate values for your environment in the `terraform.tfvars` file. The following fields require values to be filled in: aws_access_key, aws_secret_key, whitelist_ips, and instance_key.
+Fill in the appropriate values for your environment in the `terraform.tfvars` file (contents shown below). The following fields require values to be filled in: aws_access_key, aws_secret_key, whitelist_ips, and instance_key.
 
   ```
     aws_region = "us-east-1"
