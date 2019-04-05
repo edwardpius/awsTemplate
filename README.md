@@ -41,6 +41,22 @@ After downloading the code the structure of your folder will look as follows:
 
 Fill in the appropriate values for your environment in the `terraform.tfvars` file. The following fields require values to be filled in: aws_access_key, aws_secret_key, whitelist_ips, and instance_key.
 
+  ```
+    aws_region = "us-east-1"
+    aws_access_key = "<AWS_KEY>"
+    aws_secret_key = "<AWS_SECRET>"
+    ami_linux_images = {
+        us-east-1 = "ami-b73b63a0"
+        us-west-2 = "ami-5ec1673e"
+        eu-west-1 = "ami-9398d3e0"
+    }
+    vpc_cidr = "172.28.0.0/16"
+    subnet_public_AzA_cidr = "172.28.1.0/24"
+    whitelist_ips = ["<whitelist IPs>"]
+    instance_user_home = "/home/ec2-user"
+    instance_key = "<SSH Private Key for EC2 instance>"
+  ```
+
 Go into the terraform and run the following commands:
 
     ```bash
