@@ -1,3 +1,13 @@
+##Introduction
+
+1. This repo contains artifacts which uses the IaC tool Terraform to deploy a simple application in an EC2 instance in AWS.
+
+1. The deployment in AWS is self contained, which means the whole application will be deployed into it's own VPC (private network in AWS) with all the affiliated infrastructure artifacts in AWS.
+
+1. The application is written in NodeJS using REST which, when called with an end-point will reply with a simple (st atic) message and a timestamp.
+
+1. Once verified, the whole infrastructure can be destroyed with a simple command.
+
 ## Quick start
 
 1. [Install Terraform](https://www.terraform.io/intro/getting-started/install.html).
@@ -52,12 +62,11 @@
   }
 ```
 
-
 ## Running Unit Tests
 
-Unit tests for this application can be run from either the local environment or from the instance which was spun up in AWS.
+1. Unit tests for this application can be run from either the local environment or from the instance which was spun up in AWS.
 
-Running from the local environment:
+1. Running from the local environment:
 
 ```
 Clone the repo as above
@@ -68,7 +77,7 @@ Update the value of the public IP in the api_spec.js file for both the variables
 Run node_modules/.bin/jasmine-node spec
 ```
 
-Running from the EC2 instance:
+1. Running from the EC2 instance:
 
 ```
 SSH into the EC2 instance
@@ -78,3 +87,6 @@ Update the value of the public IP in the api_spec.js file for both the variables
 Run node_modules/.bin/jasmine-node spec
 ```
 
+## Deleting the configuration
+
+1. Just run `terraform destroy` to delete all the infrastructure components in AWS.
